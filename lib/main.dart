@@ -287,6 +287,7 @@ class _QuestionScreenState extends State<QuestionScreen> {
 
   void showResult() {
     showDialog(
+      barrierDismissible: false,
       context: context,
       builder: (BuildContext context) {
         return AlertDialog(
