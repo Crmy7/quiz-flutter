@@ -50,15 +50,19 @@ class _MyHomePageState extends State<MyHomePage> {
         child: Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
+            const Text(
+              'Le meilleur quiz du monde',
+              style: (TextStyle(
+                fontSize: 30,
+                fontWeight: FontWeight.bold,
+              )),
+              textAlign: TextAlign.center,
+            ),
             Container(
-              height: 150,
+              height: 250,
               width: 300,
-              decoration: BoxDecoration(
-                border: Border.all(
-                  width: 3,
-                  color: Colors.white,
-                ),
-                image: const DecorationImage(
+              decoration: const BoxDecoration(
+                image: DecorationImage(
                   image: AssetImage(
                     "assets/images/AdobeStock_290390054.jpeg",
                   ),
@@ -67,7 +71,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 ),
               ),
             ),
-            SizedBox(height: 50),
+            const SizedBox(height: 50),
             TextButton(
               style: ButtonStyle(
                 foregroundColor: MaterialStateProperty.all<Color>(Colors.blue),
@@ -93,7 +97,7 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ],
         ),
-      ), // This trailing comma makes auto-formatting nicer for build methods.
+      ),
     );
   }
 }
@@ -117,67 +121,67 @@ class QuestionData {
   List<Question> questionList = [
     Question(
         question:
-            "L'homme a marché sur la Lune avant d'inventé la valise à roulette",
+            "Les escargots entraînent le décès d'environ 100.000 personnes chaque année.",
         response: true,
         explanation:
-            'Le premier alunissage a eu lieu en 1969 tandis que les premières roulettes sont apparues en 1970',
-        imagePath: 'suitcase.jpeg'),
+            'L\'escargot transmet un parasite qui s’appelle le schistosome.',
+        imagePath: 'escargots.jpeg'),
     Question(
-        question:
-            "Une cuillère de miel correspond au travail d'une vie de 12 abeilles ?",
-        response: true,
-        explanation: "Les abeilles sont indispensables et très fragiles ...",
-        imagePath: 'honey.webp'),
-    Question(
-        question: "Les avions volent plus rapidement aujourd'hui qu'avant ?",
+        question: "Un éternuement peut avoir une vitesse de 160km/h.",
         response: false,
         explanation:
-            "Pour des raisons économiques et de carburants, les avions d'aujourd'hui volent moins vite !",
-        imagePath: 'airplane.webp'),
+            "D'après des études, la vitesse des éternuements est entre 16km/h et 50km/h",
+        imagePath: 'sneeze.jpeg'),
     Question(
-        question:
-            "L'inventeur des publicités pop-ups s'est excusé pour sa création ?",
+        question: "Tous les tanks britanniques sont équipés pour boire le thé.",
         response: true,
         explanation:
-            "Il est vraiment désolé, c'est intentions étaient bonnes ...",
-        imagePath: 'web.webp'),
-    Question(
-        question: "Possédons-nous un peu d'or dans notre corps ?",
-        response: true,
-        explanation: "Une personne de 70kg possède environ 0.2mg d'or en elle",
-        imagePath: 'gold.webp'),
+            "Depuis 1945, les tanks ont une théière pour éviter aux soldats de sortir de la machine à l’heure du thé.",
+        imagePath: 'tank.jpeg'),
     Question(
         question:
-            "100k, c'est le nombre de combinaisons possibles avec des briques 2x4 de LEGO ?",
+            "La langue officielle des États-Unis d’Amérique est l’anglais.",
         response: false,
         explanation:
-            "915,103,765 combinaisons possibles, c'est le résultat obtenu après une semaine de calcul par le programme du mathématicien Soren Eilers",
-        imagePath: 'lego.jpeg'),
+            "L’anglais est la langue parlée par la majorité des Américains, mais elle n'a jamais été adoptée au niveau fédéral.",
+        imagePath: 'usa.jpeg'),
+    Question(
+        question: "Bordeaux a déjà été la capitale de la France. ",
+        response: true,
+        explanation:
+            "Pendant la Première Guerre mondiale, le gouvernement français déménagea brièvement la capitale à Bordeaux.",
+        imagePath: 'bordeaux.jpeg'),
     Question(
         question:
-            "Une vache appelée par son nom produira plus de lait qu'une qui ne l'est pas ?",
-        response: true,
-        explanation: '258L de lait en plus par an pour être exact !',
-        imagePath: 'cow.jpeg'),
-    Question(
-        question: "Le drapeau des Etats-Unis a été créé par un étudiant ?",
+            "Aucun pays d’Afrique n’a jamais remporté la Coupe du Monde de foot.",
         response: true,
         explanation:
-            "Pour un projet de classe, l'étudiant a eu un B puis un A lorsque le congrès l'a choisi comme drapeau national !",
-        imagePath: 'america.jpeg'),
+            "C'est vrai et avant le Maroc en 2022, aucun pays africain n’avait même participé à une demi-finale de Coupe du Monde.",
+        imagePath: 'coupedumonde.jpeg'),
     Question(
-        question: "Les astronautes peuvent-ils voter depuis l'espace ?",
+        question: "Les marmottes ne boivent jamais d’eau.",
         response: true,
         explanation:
-            "Même dans l'espace, le devoir d'un citoyen doit être effectué !",
-        imagePath: 'astronaut.jpeg'),
+            'Vrai, c’est pourquoi elles mangent de préférence à l’aube pendant la rosée.',
+        imagePath: 'marmottes.jpeg'),
     Question(
         question:
-            "Tout le Nutella vendu en 1 an pourrait être étalé sur environ 50 terrains de football",
-        response: false,
+            "Les habitantes de l'île de Lesbos en Grèce sont appelées des Lesbiennes.",
+        response: true,
+        explanation: "Les habitants de Lesbos sont des Lesbiens et Lesbiennes.",
+        imagePath: 'lesbos.jpeg'),
+    Question(
+        question: "Certains pays du monde n'ont pas d'aéroport.",
+        response: true,
         explanation:
-            "En realité il pourrait être étalé sur 1000 terrain de football !",
-        imagePath: 'nutella.jpeg')
+            "Oui car ce sont des petits États. ex: Monaco, le Vatican, San Marin, Liechtenstein et d'Andorre.",
+        imagePath: 'airport.jpeg'),
+    Question(
+        question: "En France, il est interdit de manger du chat et du chien.",
+        response: true,
+        explanation:
+            "Aucune loi n’interdit la consommation de viande de chat ou de chien.",
+        imagePath: 'cat.jpeg')
   ];
 }
 
@@ -189,18 +193,176 @@ class QuestionScreen extends StatefulWidget {
 }
 
 class _QuestionScreenState extends State<QuestionScreen> {
+  QuestionData questionData = QuestionData();
+  int questionNumber = 0;
+  int score = 0;
+
+  void checkAnswer(userAnswer) {
+    bool correctAnswer = questionData.questionList[questionNumber].response;
+
+    if (userAnswer == correctAnswer) {
+      setState(() {
+        score++;
+      });
+    }
+
+    showDialog(
+      barrierDismissible: false,
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: Text(
+            userAnswer == correctAnswer ? 'Bonne réponse' : 'Mauvaise réponse',
+            style: const TextStyle(fontWeight: FontWeight.bold),
+          ),
+          content: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Container(
+                  margin: const EdgeInsets.only(top: 5.0, bottom: 20.0),
+                  child: Image.asset(
+                    userAnswer == correctAnswer
+                        ? "assets/images/correct.gif"
+                        : "assets/images/false.gif",
+                    fit: BoxFit.fill,
+                  ),
+                ),
+                Row(
+                  children: [
+                    Expanded(
+                      child: Text(
+                        questionData.questionList[questionNumber].explanation,
+                        style: const TextStyle(
+                          fontSize: 18.0,
+                          color: Colors.black,
+                        ),
+                      ),
+                    )
+                  ],
+                )
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            const Divider(
+              height: 1,
+              thickness: 1,
+              color: Colors.black,
+            ),
+            Container(
+              margin: const EdgeInsets.only(bottom: 20.0, top: 20.0),
+              child: Row(
+                children: [
+                  Expanded(
+                    child: TextButton(
+                      style: ButtonStyle(
+                        backgroundColor: MaterialStateProperty.all<Color>(
+                            Colors.purpleAccent),
+                      ),
+                      onPressed: () {
+                        Navigator.of(context).pop();
+                        setState(() {
+                          if (questionNumber <
+                              questionData.questionList.length - 1) {
+                            questionNumber++;
+                          } else {
+                            showResult();
+                          }
+                        });
+                      },
+                      child: const Text(
+                        'Prochaine question',
+                        style: TextStyle(fontSize: 22, color: Colors.white),
+                      ),
+                    ),
+                  )
+                ],
+              ),
+            )
+          ],
+        );
+      },
+    );
+  }
+
+  void showResult() {
+    showDialog(
+      context: context,
+      builder: (BuildContext context) {
+        return AlertDialog(
+          title: const Text('Fin du quiz'),
+          content: SingleChildScrollView(
+            child: Column(
+              children: <Widget>[
+                Text(
+                    score >= 5
+                        ? 'Félicitations ! tu as eu $score bonnes réponses !'
+                        : 'T\'es éclaté au sol tu as eu seulement $score bonne réponses !',
+                    style: const TextStyle(
+                      fontSize: 18.0,
+                      color: Colors.black,
+                      fontWeight: FontWeight.bold,
+                    )),
+                Container(
+                  margin: const EdgeInsets.only(bottom: 20.0, top: 20.0),
+                  child: Image.asset(
+                    score >= 5
+                        ? "assets/images/thats-my-boy-curtis-payne.gif"
+                        : "assets/images/worriedface.gif",
+                    fit: BoxFit.fill,
+                  ),
+                )
+              ],
+            ),
+          ),
+          actions: <Widget>[
+            Expanded(
+              child: TextButton(
+                style: ButtonStyle(
+                  backgroundColor:
+                      MaterialStateProperty.all<Color>(Colors.purpleAccent),
+                ),
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  resetQuiz();
+                },
+                child: const Text(
+                  'Recommencer le quiz',
+                  style: TextStyle(fontSize: 22, color: Colors.white),
+                ),
+              ),
+            )
+          ],
+        );
+      },
+    );
+  }
+
+  void resetQuiz() {
+    setState(() {
+      questionNumber = 0;
+      score = 0;
+      Navigator.pop(
+        context,
+        MaterialPageRoute(
+            builder: (context) => const MyHomePage(title: 'Quiz App')),
+      );
+    });
+  }
+
+  @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
-        title: Text('Score : 88888'),
+        title: Text('Score : $score/${questionData.questionList.length}'),
       ),
       body: Column(
         children: [
           Padding(
             padding: const EdgeInsets.all(15.0),
             child: Text(
-              'Question 1/10',
+              'Question : ' + (questionNumber + 1).toString(),
               textAlign: TextAlign.center,
               style: const TextStyle(
                 fontSize: 20.0,
@@ -208,63 +370,103 @@ class _QuestionScreenState extends State<QuestionScreen> {
               ),
             ),
           ),
-          Image.asset(
-            "assets/images/AdobeStock_290390054.jpeg",
-            fit: BoxFit.contain,
-          ),
-          Padding(
-            padding: const EdgeInsets.all(15.0),
-            child: Text(
-              'Quel est la couleur du rouge',
-              textAlign: TextAlign.center,
-              style: const TextStyle(
-                fontSize: 25.0,
-                color: Colors.black,
+          Container(
+            decoration: const BoxDecoration(
+              border: Border(
+                top: BorderSide(width: 1.0, color: Colors.grey),
+                bottom: BorderSide(width: 1.0, color: Colors.grey),
+              ),
+            ),
+            child: Padding(
+              padding: const EdgeInsets.only(top: 100, bottom: 100),
+              child: Column(
+                children: [
+                  Container(
+                    height: 250,
+                    width: 250,
+                    decoration: BoxDecoration(
+                      border: Border.all(
+                        width: 3,
+                        color: Colors.black,
+                      ),
+                      borderRadius: BorderRadius.circular(300),
+                      image: DecorationImage(
+                        image: AssetImage(
+                          questionData.questionList[questionNumber].getImage(),
+                        ),
+                        fit: BoxFit.cover,
+                        alignment: Alignment.center,
+                      ),
+                    ),
+                  ),
+                  Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: Container(
+                      height: 80,
+                      child: Text(
+                        questionData.questionList[questionNumber].question,
+                        textAlign: TextAlign.center,
+                        style: const TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.black,
+                          fontWeight: FontWeight.bold,
+                        ),
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
           ),
-          Row(
-            children: [
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: TextButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.green),
-                    ),
-                    onPressed: () {},
-                    child: const Text(
-                      'Vrai',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
+          Padding(
+            padding: EdgeInsets.only(top: 20),
+            child: Row(
+              children: [
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: TextButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.green),
+                      ),
+                      onPressed: () {
+                        checkAnswer(true);
+                      },
+                      child: const Text(
+                        'Vrai',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-              Expanded(
-                child: Padding(
-                  padding: const EdgeInsets.all(15.0),
-                  child: TextButton(
-                    style: ButtonStyle(
-                      backgroundColor:
-                          MaterialStateProperty.all<Color>(Colors.red),
-                    ),
-                    onPressed: () {},
-                    child: const Text(
-                      'Faux',
-                      style: TextStyle(
-                        fontSize: 20.0,
-                        color: Colors.white,
+                Expanded(
+                  child: Padding(
+                    padding: const EdgeInsets.all(15.0),
+                    child: TextButton(
+                      style: ButtonStyle(
+                        backgroundColor:
+                            MaterialStateProperty.all<Color>(Colors.red),
+                      ),
+                      onPressed: () {
+                        checkAnswer(false);
+                      },
+                      child: const Text(
+                        'Faux',
+                        style: TextStyle(
+                          fontSize: 20.0,
+                          color: Colors.white,
+                        ),
                       ),
                     ),
                   ),
                 ),
-              ),
-            ],
-          ),
+              ],
+            ),
+          )
         ],
       ),
     );
